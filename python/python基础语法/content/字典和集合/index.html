@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>字典和集合 // 释怀</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://snowdream87.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="字典和集合"/>
+<meta name="twitter:description" content="字典 什么是字典（dict）  a.字典是容器型数据类型(序列)，将大括号{ }做为容器的标志，里面多个元素通逗号给开
+&nbsp;&nbsp;&nbsp;&nbsp;特点：可变(支持增删改)，无序(不支持下标操作)
+ b.字典中的元素
+&nbsp;&nbsp;&nbsp;&nbsp; ，以&rsquo;键:值&rsquo;的形式成对出现 - {键1:值1，键2:值2，&hellip;.}
+&nbsp;&nbsp;&nbsp;&nbsp;字典存储数据主要为了存值，键只是为了区分不同的值而存在的 c.要求：
+&nbsp;&nbsp;&nbsp;&nbsp;键值对中的键 - 键必须不可变；唯一的
+&nbsp;&nbsp;&nbsp;&nbsp;键值对的值 - 和列表元素一样，任何数据都可以作为值
+###字典的增删改查
+#####1.查 - 获取字典的值
+  1）. 获取单个元素的值
+&nbsp;&nbsp;&nbsp;&nbsp;字典[key] - 获取字典中指定key对应的值；如果key不存在，会报错
+&nbsp;&nbsp;&nbsp;&nbsp;字典.get(key) / 字典.get(key，默认值) - 获取字典中指定key对应的值；如果key不存在返回值为None，或默认值
+2）.遍历
+&nbsp;&nbsp;&nbsp;&nbsp;for - in 字典直接拿到的是key
+dog = {&#39;name&#39;: &#39;毛孩子&#39;, &#39;age&#39;: &#39;2&#39;} print(dog.get(&#39;name&#39;)) # 常用遍历 print(&#39;=============1============&#39;) for key in dog: print(key, dog[key]) # 以下不能用，能看懂就行 print(&#39;=============2============&#39;) for value in dog.values(): print(value) print(&#39;=============3============&#39;) for key, value in dog."/>
+
+    <meta property="og:title" content="字典和集合" />
+<meta property="og:description" content="字典 什么是字典（dict）  a.字典是容器型数据类型(序列)，将大括号{ }做为容器的标志，里面多个元素通逗号给开
+&nbsp;&nbsp;&nbsp;&nbsp;特点：可变(支持增删改)，无序(不支持下标操作)
+ b.字典中的元素
+&nbsp;&nbsp;&nbsp;&nbsp; ，以&rsquo;键:值&rsquo;的形式成对出现 - {键1:值1，键2:值2，&hellip;.}
+&nbsp;&nbsp;&nbsp;&nbsp;字典存储数据主要为了存值，键只是为了区分不同的值而存在的 c.要求：
+&nbsp;&nbsp;&nbsp;&nbsp;键值对中的键 - 键必须不可变；唯一的
+&nbsp;&nbsp;&nbsp;&nbsp;键值对的值 - 和列表元素一样，任何数据都可以作为值
+###字典的增删改查
+#####1.查 - 获取字典的值
+  1）. 获取单个元素的值
+&nbsp;&nbsp;&nbsp;&nbsp;字典[key] - 获取字典中指定key对应的值；如果key不存在，会报错
+&nbsp;&nbsp;&nbsp;&nbsp;字典.get(key) / 字典.get(key，默认值) - 获取字典中指定key对应的值；如果key不存在返回值为None，或默认值
+2）.遍历
+&nbsp;&nbsp;&nbsp;&nbsp;for - in 字典直接拿到的是key
+dog = {&#39;name&#39;: &#39;毛孩子&#39;, &#39;age&#39;: &#39;2&#39;} print(dog.get(&#39;name&#39;)) # 常用遍历 print(&#39;=============1============&#39;) for key in dog: print(key, dog[key]) # 以下不能用，能看懂就行 print(&#39;=============2============&#39;) for value in dog.values(): print(value) print(&#39;=============3============&#39;) for key, value in dog." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://snowdream87.github.io/python/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/content/%E5%AD%97%E5%85%B8%E5%92%8C%E9%9B%86%E5%90%88/" />
+<meta property="article:published_time" content="2019-08-04T17:52:36&#43;08:00"/>
+<meta property="article:modified_time" content="2019-08-04T17:52:36&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://snowdream87.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>释怀</h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青春是隐藏在记忆角落里那个让人傻笑，后悔，叹息的人和事，可触摸。青春是让人怒，让人哭，让人笑，让人叹息的情绪，可感觉。青春也是一场远行，到后来我们是回不去了。</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">字典和集合</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 4, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h1 id="字典">字典</h1>
+
+<h3 id="什么是字典-dict">什么是字典（dict）</h3>
+
+<ul>
+<li>a.字典是容器型数据类型(序列)，将大括号{ }做为容器的标志，里面多个元素通逗号给开<br />
+&nbsp;&nbsp;&nbsp;&nbsp;特点：可变(支持增删改)，无序(不支持下标操作)<br /></li>
+<li>b.字典中的元素<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  ，以&rsquo;键:值&rsquo;的形式成对出现 - {键1:值1，键2:值2，&hellip;.}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;字典存储数据主要为了存值，键只是为了区分不同的值而存在的</li>
+<li>c.要求：<br />
+&nbsp;&nbsp;&nbsp;&nbsp;键值对中的键 - 键必须不可变；唯一的<br />
+&nbsp;&nbsp;&nbsp;&nbsp;键值对的值 - 和列表元素一样，任何数据都可以作为值<br />
+###字典的增删改查<br />
+#####1.查 - 获取字典的值<br /></li>
+</ul>
+
+<p>1）. 获取单个元素的值<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;字典[key] - 获取字典中指定key对应的值；如果key不存在，会报错<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;字典.get(key) / 字典.get(key，默认值) - 获取字典中指定key对应的值；如果key不存在返回值为None，或默认值</p>
+
+<p>2）.遍历<br />
+&nbsp;&nbsp;&nbsp;&nbsp;for - in 字典直接拿到的是key</p>
+
+<pre><code class="language-python">dog = {'name': '毛孩子', 'age': '2'}
+print(dog.get('name'))
+
+# 常用遍历
+print('=============1============')
+for key in dog:
+    print(key, dog[key])
+
+# 以下不能用，能看懂就行
+print('=============2============')
+for value in dog.values():
+    print(value)
+
+print('=============3============')
+for key, value in dog.items():
+    print(key, value)
+</code></pre>
+
+<h5 id="2-增-改-增加字典的值">2.增/改 - 增加字典的值</h5>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;增 - 添加键对；改 - 修改字典中某个key对应的值<br />
+&nbsp;&nbsp;&nbsp;&nbsp;语法：字典[key] = 值 - 当key不存在就在字典中添加键值对&rsquo;key&rsquo;:值  ；当key存在的时候就修改对应的值</p>
+
+<pre><code class="language-python">dog['color'] = '黄色'
+print(dog)
+dog['color'] = '白色'
+print(dog)
+</code></pre>
+
+<h5 id="3-删-删除key对应的值">3.删 - 删除key对应的值</h5>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1）del 字典[key]   -   删除指定key对应的键值对<br />
+&nbsp;&nbsp;&nbsp;&nbsp;2）字典.pop[key]   -   取出字典中key对应的值,返回被取出来的值</p>
+
+<h3 id="相关运算">相关运算</h3>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;字典不支持数学运算符，比较运算符，只支持 ==， !=<br />
+###相关操作：in / not in ，max，min，sum，len，dict<br />
+&nbsp;&nbsp;&nbsp;&nbsp;key in 字典   -   判断字典中是否存在某个键<br />
+&nbsp;&nbsp;&nbsp;&nbsp;max(字典)     -   求的是字典中key的最大值<br />
+&nbsp;&nbsp;&nbsp;&nbsp;max，min，sum，len     -   针对的是key的操作<br />
+&nbsp;&nbsp;&nbsp;&nbsp;dict(数据)    -   将指定数据转换成列表<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 数据的要求：<br />
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a.数据本身是一个序列<br />
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.序列中的元素，必须有且只有两个元素的小序列</p>
+
+<pre><code class="language-python">print(dict([(1, 2), ['小狗', 3], 'qw']))
+dic = dict([(1, 2), ['小狗', 3], 'qw'])
+print(dic)
+</code></pre>
+
+<h3 id="相关方法">相关方法</h3>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1)dict.fromkeys(序列， 值1 = None)     -   创建一个新字典，将序列中的元素做为字典的key，将值1做为每个key对应的value</p>
+
+<pre><code class="language-python">new_dict = dict.fromkeys(['a', 'b', 'c', 'd'], 10)
+print(new_dict)
+</code></pre>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;2)字典.item()   -   将字典中的键值对转换成元组作为容器中的元素<br />
+&nbsp;&nbsp;&nbsp;&nbsp;3)字典.value()，字典.key()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;4).字典.setdefault(key, vlaue = None)  -   在字典中添加键值对(  )<br />
+&nbsp;&nbsp;&nbsp;&nbsp;5)字典1.update(字典2)   -   将字典2中的键值对全部添加到字典1中</p>
+
+<pre><code class="language-python">dic.update(new_dict)
+print(dic)
+</code></pre>
+
+<p>#集合</p>
+
+<h3 id="什么是集合-set">什么是集合(set)</h3>
+
+<p>1）集合<br />
+&nbsp;&nbsp;&nbsp;&nbsp;集合是容器型数据类型；将{}作为容器的标志，多个元素用都还隔开(和字典不一样，集合的元素是独立的数据不是键值对)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;特点：<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可变(增删)、无序(不支持下标操作)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自带去重功能<br />
+&nbsp;&nbsp;&nbsp;&nbsp;注意：<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{}表示的是空子典；<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set()创建空集合</p>
+
+<p>2）元素    -   不可变的数据；同一个元素只能有一个(唯一性)</p>
+
+<h3 id="集合元素的增删改查">集合元素的增删改查</h3>
+
+<p>1)查   -   只支持遍历，不能单独获取具体某一个元素<br />
+2)增:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;集合.add(元素)  -  可以在集合中添加一个元素<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;集合.update(序列 )  -   将序列中的所有元素添加到集合中<br />
+3)删：<br />
+   &nbsp;&nbsp;&nbsp;&nbsp; 集合.remove(元素)   -   删除集合中指定的元素，元素必须存在<br />
+4)改(集合不支持修改元素的操作)</p>
+
+<h3 id="数学集合运算">数学集合运算：</h3>
+
+<p>1）求并集：  集合1 | 集合2  ——  将两个集合的元素合并，并去重<br />
+2）求交集：  集合1 &amp; 集合2  ——  获取两个元素的公共部分<br />
+3）求差集：  集合1 - 集合2  ——  获取集合1中除去集合2的元素剩下的部分<br />
+4）对称差集：集合1 ^ 集合2  ——  两个集合除了公共部分剩下的部分<br />
+5）包含：    集合1 &gt; 集合2  ——  判断集合1是否包含集合2</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

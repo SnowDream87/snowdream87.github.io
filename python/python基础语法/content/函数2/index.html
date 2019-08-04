@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>函数2 // 释怀</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://snowdream87.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="函数2"/>
+<meta name="twitter:description" content="匿名函数 匿名函数就是没有函数名的函数（）匿名函数可以看成是类型是func的值
+1）语法
+&nbsp;&nbsp;&nbsp;&nbsp; lambda 参数列表:返回值
+2）说明
+&nbsp;&nbsp;&nbsp;&nbsp;lambd - 关键字
+&nbsp;&nbsp;&nbsp;&nbsp;参数列表- 参数名1，&hellip;.
+&nbsp;&nbsp;&nbsp;&nbsp; : - 固定写法
+&nbsp;&nbsp;&nbsp;&nbsp; 返回值 - 任何有结果的表达式； ，相当于普通函数的return语句
+3）参数
+&nbsp;&nbsp;&nbsp;&nbsp; 普通函数中除了用&rsquo;参数名：类型&rsquo;的形式来指定参数类型以外，其他语法匿名函数都能用
+变量的作用域 1.变量的作用域：变量在程序中能够使用的范围
+2.全局变量和局部变量
+&nbsp;&nbsp;&nbsp;&nbsp; a.全局变量：没有声明在函数里面或者类里面的变量
+&nbsp;&nbsp;&nbsp;&nbsp; 作用域：从声明开始到文件结束的任何位置
+&nbsp;&nbsp;&nbsp;&nbsp; b.局部变量：声明在函数中的变量(函数的参数相当于声明在函数中的变量)
+&nbsp;&nbsp;&nbsp;&nbsp; 作用域：从声明开始到函数结束的任何位置
+3.函数的调用过程(内存)：压栈
+&nbsp;&nbsp;&nbsp;&nbsp; 当调用函数的时候，系统会自动在内存的栈区间为这个函数开辟一个独立的区域用来保存在函数声明的变量。但函数调用结束这个内存会自动释放。
+​
+4.global和nonlocal，是函数中的关键字和return一样只能在函数体中使用
+&nbsp;&nbsp;&nbsp;&nbsp; 1）global - 在函数内声明一个全局变量
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; global 变量
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 变量 = 值
+&nbsp;&nbsp;&nbsp;&nbsp; 2）nonlocal - 在局部的局部中去修改局部变量的值
+递归 1.什么是递归函数
+&nbsp;&nbsp;&nbsp;&nbsp;自己调自己的函数(函数体中调用当前函数)
+&nbsp;&nbsp;&nbsp;&nbsp; 循环能做的事情递归都可以做
+&nbsp;&nbsp;&nbsp;&nbsp;注意：能用循环解决的问题就不要用递归
+2.怎么写递归
+&nbsp;&nbsp;&nbsp;&nbsp;第一步：找临界值(循环结束的条件)，在这需要结束函数
+&nbsp;&nbsp;&nbsp;&nbsp;第二步：找关系 - 找f(n)和f(n-1) 的关系(找当次循环和上次循环的关系)"/>
+
+    <meta property="og:title" content="函数2" />
+<meta property="og:description" content="匿名函数 匿名函数就是没有函数名的函数（）匿名函数可以看成是类型是func的值
+1）语法
+&nbsp;&nbsp;&nbsp;&nbsp; lambda 参数列表:返回值
+2）说明
+&nbsp;&nbsp;&nbsp;&nbsp;lambd - 关键字
+&nbsp;&nbsp;&nbsp;&nbsp;参数列表- 参数名1，&hellip;.
+&nbsp;&nbsp;&nbsp;&nbsp; : - 固定写法
+&nbsp;&nbsp;&nbsp;&nbsp; 返回值 - 任何有结果的表达式； ，相当于普通函数的return语句
+3）参数
+&nbsp;&nbsp;&nbsp;&nbsp; 普通函数中除了用&rsquo;参数名：类型&rsquo;的形式来指定参数类型以外，其他语法匿名函数都能用
+变量的作用域 1.变量的作用域：变量在程序中能够使用的范围
+2.全局变量和局部变量
+&nbsp;&nbsp;&nbsp;&nbsp; a.全局变量：没有声明在函数里面或者类里面的变量
+&nbsp;&nbsp;&nbsp;&nbsp; 作用域：从声明开始到文件结束的任何位置
+&nbsp;&nbsp;&nbsp;&nbsp; b.局部变量：声明在函数中的变量(函数的参数相当于声明在函数中的变量)
+&nbsp;&nbsp;&nbsp;&nbsp; 作用域：从声明开始到函数结束的任何位置
+3.函数的调用过程(内存)：压栈
+&nbsp;&nbsp;&nbsp;&nbsp; 当调用函数的时候，系统会自动在内存的栈区间为这个函数开辟一个独立的区域用来保存在函数声明的变量。但函数调用结束这个内存会自动释放。
+​
+4.global和nonlocal，是函数中的关键字和return一样只能在函数体中使用
+&nbsp;&nbsp;&nbsp;&nbsp; 1）global - 在函数内声明一个全局变量
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; global 变量
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 变量 = 值
+&nbsp;&nbsp;&nbsp;&nbsp; 2）nonlocal - 在局部的局部中去修改局部变量的值
+递归 1.什么是递归函数
+&nbsp;&nbsp;&nbsp;&nbsp;自己调自己的函数(函数体中调用当前函数)
+&nbsp;&nbsp;&nbsp;&nbsp; 循环能做的事情递归都可以做
+&nbsp;&nbsp;&nbsp;&nbsp;注意：能用循环解决的问题就不要用递归
+2.怎么写递归
+&nbsp;&nbsp;&nbsp;&nbsp;第一步：找临界值(循环结束的条件)，在这需要结束函数
+&nbsp;&nbsp;&nbsp;&nbsp;第二步：找关系 - 找f(n)和f(n-1) 的关系(找当次循环和上次循环的关系)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://snowdream87.github.io/python/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/content/%E5%87%BD%E6%95%B02/" />
+<meta property="article:published_time" content="2019-08-04T18:07:22&#43;08:00"/>
+<meta property="article:modified_time" content="2019-08-04T18:07:22&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://snowdream87.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>释怀</h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青春是隐藏在记忆角落里那个让人傻笑，后悔，叹息的人和事，可触摸。青春是让人怒，让人哭，让人笑，让人叹息的情绪，可感觉。青春也是一场远行，到后来我们是回不去了。</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">函数2</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 4, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h3 id="匿名函数">匿名函数</h3>
+
+<p>匿名函数就是没有函数名的函数（）匿名函数可以看成是类型是func的值<br />
+    1）语法<br />
+       &nbsp;&nbsp;&nbsp;&nbsp; lambda 参数列表:返回值<br />
+    2）说明<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;lambd   -   关键字<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;参数列表-   参数名1，&hellip;.<br />
+       &nbsp;&nbsp;&nbsp;&nbsp; :       -   固定写法<br />
+       &nbsp;&nbsp;&nbsp;&nbsp; 返回值  -   任何有结果的表达式；  ，相当于普通函数的return语句<br />
+    3）参数<br />
+       &nbsp;&nbsp;&nbsp;&nbsp; 普通函数中除了用&rsquo;参数名：类型&rsquo;的形式来指定参数类型以外，其他语法匿名函数都能用</p>
+
+<h3 id="变量的作用域">变量的作用域</h3>
+
+<p>1.变量的作用域：变量在程序中能够使用的范围<br />
+2.全局变量和局部变量<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; a.全局变量：没有声明在函数里面或者类里面的变量<br />
+        &nbsp;&nbsp;&nbsp;&nbsp; 作用域：从声明开始到文件结束的任何位置<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;  b.局部变量：声明在函数中的变量(函数的参数相当于声明在函数中的变量)<br />
+        &nbsp;&nbsp;&nbsp;&nbsp; 作用域：从声明开始到函数结束的任何位置<br />
+3.函数的调用过程(内存)：压栈<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;  当调用函数的时候，系统会自动在内存的栈区间为这个函数开辟一个独立的区域用来保存在函数声明的变量。但函数调用结束这个内存会自动释放。<br />
+​<br />
+4.global和nonlocal，是函数中的关键字和return一样只能在函数体中使用<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; 1）global - 在函数内声明一个全局变量<br />
+   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  global 变量<br />
+   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  变量 = 值<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;  2）nonlocal  -   在局部的局部中去修改局部变量的值</p>
+
+<h3 id="递归">递归</h3>
+
+<p>1.什么是递归函数<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;自己调自己的函数(函数体中调用当前函数)<br />
+   &nbsp;&nbsp;&nbsp;&nbsp; 循环能做的事情递归都可以做<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;注意：能用循环解决的问题就不要用递归</p>
+
+<p>2.怎么写递归<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;第一步：找临界值(循环结束的条件)，在这需要结束函数<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;第二步：找关系 -   找f(n)和f(n-1) 的关系(找当次循环和上次循环的关系)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;第三不：假设函数的功能已经实现根据关系用f(n-1)去实现f(n)的功能</p>
+
+<pre><code class="language-python">#   
+def sum1(n: int):
+    if n == 1:
+        return 1
+    return sum1(n - 1) + n
+
+print(sum1(10))
+
+# 用递归求斐波那契数
+
+def sequence(n):
+    if n == 1 or n == 2:
+        return 1
+    return sequence(n - 1) + sequence(n - 2)
+
+print(sequence(8))
+
+# 打印倒三角形
+def image(n):
+    if n == 1:
+        return '*'
+    print(n * '*')
+    return image(n-1)
+
+print(image(5))
+
+</code></pre>
+
+<h3 id="迭代器">迭代器</h3>
+
+<p>迭代器做为容器可以保存多个数据<br />
+数据来源：<br />
+    1）将其他序列转换成迭代器<br />
+        &nbsp;&nbsp;&nbsp;&nbsp; iter1 = iter(序列)<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;获取元素:不管用哪种方式去获取元素的值，那么这个元素在迭代器中就不存在了<br />
+             &nbsp;&nbsp;&nbsp;&nbsp;获取单个元素：next(迭代器)、  .<strong>next</strong>() -&gt;获取迭代器中的第一个元素<br />
+2）生成器<br />
+eg.</p>
+
+<pre><code class="language-python">iter_1 = iter('hello')
+print(next(iter_1))         # h
+print(iter_1.__next__())    # e
+for x in iter_1:
+    print(x, end=' ')       # l l o
+</code></pre>
+
+<h3 id="生成器">生成器</h3>
+
+<ol>
+<li>什么是生成器<br />
+1）生成器就是迭代器的一种<br />
+2）调用一个带有yield关键字的函数就可以得到一个生成器<br />
+ 如果函数在有一个yield<br />
+ &nbsp;&nbsp;&nbsp;&nbsp;a.调用函数不会执行函数体<br />
+&nbsp;&nbsp;&nbsp;&nbsp; b.函数调用表达式的值不是返回值，而是一个生成器对象<br /></li>
+</ol>
+
+<p>2.生成器产生的与原理<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1）一个生成器能够产生多少数据，就看执行完生成器对应的函数的函数体会遇到几次yield，yield 后面的值就是生成器能够产生的数据<br />
+&nbsp;&nbsp;&nbsp;&nbsp;2）每次获取生成器中的元素的时候，都是先去执行函数体，直到遇到yield ，并且将yield后面的值作为获取元素的结果，如果从开始执行导函数结束都没有遇到yield就会报StopIteration错误</p>
+
+<pre><code class="language-python">def fun3():
+    for x in range(10):
+        yield x
+
+
+gen3 = fun3()
+for i in range(10):
+    print(next(gen3))
+</code></pre>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

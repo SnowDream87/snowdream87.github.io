@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>元组和数字 // 释怀</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://snowdream87.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="元组和数字"/>
+<meta name="twitter:description" content="列表的相关操作  1.列表的数学运算：&#43;，*
+​ 列表1 &#43; 列表2 - 将两个列表中的元素合并参数一个新的列表；（不会修改原列表）
+​ 列表 * N - N是整数；列表中的元素重复N次产生一个新的列表
+ 2.列表的比较运算：==，!=，大小的比较意义不大
+​ 列表1 == 列表2 、 列表1 != 列表2
+​ 两个列表比较大小，不是比较列表的长度，而是比较元素的大小、
+ 3.补充：is的用法
+​ == -&gt; 判断两个数据的值是否相等
+​ is -&gt; 判断两个数据的地址是否一样
+ 4.in和not in
+​ 元素 in 列表 - 判断列表中是否存在指定的元素
+​ 元素 not in 列表 - 判断列表中是否不存在指定的元素
+ 5.内置函数max(序列), min(序列), sum(序列), len(序列)，list(序列)
+​ max和min要求系列中的元素类型必须一致：并且元素支持比较运算符
+​ sum要求序列中的元素必须是数字
+​ 迭代器和生成器不能用len
+​ list(序列) - 只有容器型数据才能转换成列表；将序列中的元素做为列表的元素产生一个新的列表
+列表的相关方法 1."/>
+
+    <meta property="og:title" content="元组和数字" />
+<meta property="og:description" content="列表的相关操作  1.列表的数学运算：&#43;，*
+​ 列表1 &#43; 列表2 - 将两个列表中的元素合并参数一个新的列表；（不会修改原列表）
+​ 列表 * N - N是整数；列表中的元素重复N次产生一个新的列表
+ 2.列表的比较运算：==，!=，大小的比较意义不大
+​ 列表1 == 列表2 、 列表1 != 列表2
+​ 两个列表比较大小，不是比较列表的长度，而是比较元素的大小、
+ 3.补充：is的用法
+​ == -&gt; 判断两个数据的值是否相等
+​ is -&gt; 判断两个数据的地址是否一样
+ 4.in和not in
+​ 元素 in 列表 - 判断列表中是否存在指定的元素
+​ 元素 not in 列表 - 判断列表中是否不存在指定的元素
+ 5.内置函数max(序列), min(序列), sum(序列), len(序列)，list(序列)
+​ max和min要求系列中的元素类型必须一致：并且元素支持比较运算符
+​ sum要求序列中的元素必须是数字
+​ 迭代器和生成器不能用len
+​ list(序列) - 只有容器型数据才能转换成列表；将序列中的元素做为列表的元素产生一个新的列表
+列表的相关方法 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://snowdream87.github.io/python/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/content/%E5%85%83%E7%BB%84%E5%92%8C%E6%95%B0%E5%AD%97/" />
+<meta property="article:published_time" content="2019-08-04T17:51:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-08-04T17:51:00&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://snowdream87.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>释怀</h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青春是隐藏在记忆角落里那个让人傻笑，后悔，叹息的人和事，可触摸。青春是让人怒，让人哭，让人笑，让人叹息的情绪，可感觉。青春也是一场远行，到后来我们是回不去了。</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">元组和数字</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 4, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h3 id="列表的相关操作">列表的相关操作</h3>
+
+<ul>
+<li>1.列表的数学运算：+，*<br />
+ ​  列表1 + 列表2     -      将两个列表中的元素合并参数一个新的列表；（不会修改原列表）<br />
+ ​  列表 * N        -       N是整数；列表中的元素重复N次产生一个新的列表<br /></li>
+<li>2.列表的比较运算：==，!=，大小的比较意义不大<br />
+​   列表1 == 列表2 、 列表1 != 列表2<br />
+​   两个列表比较大小，不是比较列表的长度，而是比较元素的大小、<br /></li>
+<li>3.补充：is的用法<br />
+​   == -&gt; 判断两个数据的值是否相等<br />
+​   is -&gt; 判断两个数据的地址是否一样<br /></li>
+<li>4.in和not in<br />
+​        元素 in 列表    -   判断列表中是否存在指定的元素<br />
+​        元素 not in 列表    -   判断列表中是否不存在指定的元素<br /></li>
+
+<li><p>5.内置函数max(序列), min(序列), sum(序列), len(序列)，list(序列)<br />
+​        max和min要求系列中的元素类型必须一致：并且元素支持比较运算符<br />
+​        sum要求序列中的元素必须是数字<br />
+​        迭代器和生成器不能用len<br />
+​        list(序列) - 只有容器型数据才能转换成列表；将序列中的元素做为列表的元素产生一个新的列表</p>
+
+<h3 id="列表的相关方法">列表的相关方法</h3></li>
+
+<li><p>1.列表.count(元素)  -   统计列表中指定元素的个数</p></li>
+
+<li><p>2.列表.extend(序列)  -   将序列中的元素添加到列表的最后，没有返回值</p></li>
+
+<li><p>3.列表.index(元素)  -   获取元素在列表中的正下标(如元素有多个只取第一个,元素必须存在)</p>
+
+<pre><code class="language-python">print(nums.index(3))        # 1、
+</code></pre>
+
+<ul>
+<li>4.列表.reverse()  -   让列表倒叙(不会产生新列表)<br /></li>
+<li>5.排序<br /></li>
+<li>列表.sort()     -    将列表中的元素从小到大排序<br /></li>
+<li>列表.sort(reverse = True)     -    将列表中的元素从大到小排序<br /></li>
+<li>注意：列表中的元素类型必须一样，并且元素支持比较运算符；不会产生新的列表<br />
+<code>python
+nums.sort(reverse=True)
+print(nums)     # [54, 23, 23, 23, 20, 13, 10, 3, 2, 2]
+</code></li>
+</ul></li>
+
+<li><p>5.内置函数sorted()，有返回值返回一个列表<br />
+​    列表.sorted(序列)     -    将列表中的元素从小到大排序<br />
+​    列表.sorted(reverse = True)     -    将列表中的元素从大到小排序，产生一个新列表<br />
+```python</p>
+
+<ul>
+<li><p>new_nums = sorted(nums)
+print(new_nums)        # [2, 2, 3, 10, 13, 20, 23, 23, 23, 54]</p>
+
+<pre><code>+ 6.清空  
+​        列表.clear()  
+```python
+nums.clear()
+print(nums)         # []
+</code></pre></li>
+</ul></li>
+
+<li><p>7.copy()<br />
+​         列表.copy() - 和列表[:]的效果一样，拷贝列表中的元素产生一个新的列表。这个拷贝是浅拷贝</p>
+
+<pre><code class="language-python">nums = [1, 2, 3]
+new_nums1 = nums.copy()
+new_nums2 = nums[:]
+new_nums1.append(100)
+print(new_nums1, nums, new_nums2)       # 1, 2, 3, 100 [1, 2, 3]
+</code></pre>
+
+<h3 id="元组">元组</h3>
+
+<ul>
+<li><p>1.什么是元组(tuple)<br />
+元组就是不可变的列表<br />
+​  元组是容器型数据类型(序列)，将小括号做为容器的标志，多个元素用括号隔开(元素1，元素2，&hellip;)<br />
+​  特点：不可变(不支持增删改)，有序(支持下标操作)<br />
+​  元组中的元素 - 和列表要求一样</p></li>
+
+<li><p>2.元组的表示<br />
+​        单个元素的元组(元素，)​（），（10），（10, 20）</p></li>
+
+<li><p>3.获取元组的元素<br />
+​       列表中获取元素的范式元组都支持;注意：切片的结果是元组<br />
+```python
+#<em>语法：多个变量某一个变量前带</em> = 元组
+#让不带*的变量去元组中获取元素，剩下的全部给带*的变量(带*的变量会变成列表)
+student = (&lsquo;小米&rsquo;, 28, &lsquo;std001&rsquo;, 20, 25, 35)
+name, age, study_id, *scores = student
+print(name, age, study_id, scores)</p></li>
+</ul>
+
+<p>x, *y, z = student
+print(x, y, z)      # [小米 [28, &lsquo;std001&rsquo;, 20, 25] 35
+```</p></li>
+
+<li><p>4.元组的相关操作：和列表一样</p></li>
+</ul>
+
+<h3 id="数字">数字</h3>
+
+<p>python中数字相关的类型有：int，float，bool，complex(复数)<br />
++ 1.整型<br />
+  ​ 所有的整数对应的数字类型就是整型<br />
+  ​ int(数据) -&gt; 将数据转换成整型。所有的小数、布尔值、和部分字符串可以砖汉成整数字符串中只有去掉             引号后本身就是一个整数的字符串才能转换成</p>
+
+<pre><code class="language-python">  print(int(3.22))    # 3
+  print(int(True), int(False))     # 1 0
+  print(int(45), int('-123'))      # 45 123
+  print(int())    # 0
+</code></pre>
+
+<ul>
+<li><p>2.浮点型<br />
+​ 所有小数对应的类型就是浮点型，浮点型对应的数据类型只有float。支持科学计数法：3e4<br />
+​ float(数据) - 整型、布尔、和部分字符串可以转换成浮点型,字符串中只有去掉引号后本身就是一个数字的才能转换成浮点型</p>
+
+<pre><code class="language-python">print(3e4)  # 30000.0
+print(float(100), float(True))  # 100.0 1.0
+</code></pre>
+
+<ul>
+<li>3.布尔<br />
+​         布尔中的True本质就是整数1，False本质就是整数0<br />
+​         bool(数据) - 所有的数据都能转换成bool，所有为0为空的值都会转换成False，其他都是True<br /></li>
+<li>4.复数<br />
+​        由实部和虚部组成的数字胶复数：a+bj，对应的类型是complex,并直接支持复数运算<br />
+<code>python
+a = 10 + 20j
+print(a, type(a))
+</code></li>
+</ul></li>
+
+<li><p>5.math模块<br />
+​        math.方法名</p></li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

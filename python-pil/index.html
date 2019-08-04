@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Python PIL // 释怀</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://snowdream87.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python PIL"/>
+<meta name="twitter:description" content="&emsp;&emsp;PIL是Python第三方图像处理库，该功能强大可以对图像进行很多处理，比如图像剪切、粘贴、滤镜、缩略图、镜像、图片呈现方式、旋转等功能。
+在使用PIL是我们也要与Image，Imagefilter这两个库配合使用。以下就是一些PIL的简单教程实例。
+#我先创建一个空白图片出来，方便我将处理后的图片粘贴在上面 #Image.new(模式，大小，颜色) whileImage = Image.new(&#39;RGB&#39;, (1366, 768), (255, 255, 255)) #加载图像，图片对象 = Image.open（图片路径） image = Image.open(&#39;image/0201.jpg&#39;) #再获取到图片的宽和搞 width, height = image.size #用thumbnail（）方法将图像像素改为以下值 image.thumbnail((455, 256)) #将图片对象用filter方法进行滤镜处理。同时再新建一个图片对象 #并且将滤镜处理后的图片放入该对像，以下是几种滤镜效果 #ImageFilter.EMBOSS - 浮雕效果 #ImageFilter.FIND_EDGES - 泼墨效果 #ImageFilter.SHARPEN - 锐化滤波 #ImageFilter.SMOOTH - 平滑滤波 #ImageFilter.EDGE_ENHANCE_MORE - 边界增强滤波（程度更深） #ImageFilter.EDGE_ENHANCE - 边界增强滤波 #ImageFilter.DETAIL - 细节滤波 #ImageFilter.CONTOUR - 轮廓滤波(铅笔画) #ImageFilter.BLUR - 模糊滤波 image_1 = image.filter(ImageFilter.EMBOSS) image_2 = image.filter(ImageFilter.FIND_EDGES) image_3 = image.filter(ImageFilter.SHARPEN) image_4 = image.filter(ImageFilter.SMOOTH) image_5 = image.filter(ImageFilter.EDGE_ENHANCE_MORE) image_6 = image."/>
+
+    <meta property="og:title" content="Python PIL" />
+<meta property="og:description" content="&emsp;&emsp;PIL是Python第三方图像处理库，该功能强大可以对图像进行很多处理，比如图像剪切、粘贴、滤镜、缩略图、镜像、图片呈现方式、旋转等功能。
+在使用PIL是我们也要与Image，Imagefilter这两个库配合使用。以下就是一些PIL的简单教程实例。
+#我先创建一个空白图片出来，方便我将处理后的图片粘贴在上面 #Image.new(模式，大小，颜色) whileImage = Image.new(&#39;RGB&#39;, (1366, 768), (255, 255, 255)) #加载图像，图片对象 = Image.open（图片路径） image = Image.open(&#39;image/0201.jpg&#39;) #再获取到图片的宽和搞 width, height = image.size #用thumbnail（）方法将图像像素改为以下值 image.thumbnail((455, 256)) #将图片对象用filter方法进行滤镜处理。同时再新建一个图片对象 #并且将滤镜处理后的图片放入该对像，以下是几种滤镜效果 #ImageFilter.EMBOSS - 浮雕效果 #ImageFilter.FIND_EDGES - 泼墨效果 #ImageFilter.SHARPEN - 锐化滤波 #ImageFilter.SMOOTH - 平滑滤波 #ImageFilter.EDGE_ENHANCE_MORE - 边界增强滤波（程度更深） #ImageFilter.EDGE_ENHANCE - 边界增强滤波 #ImageFilter.DETAIL - 细节滤波 #ImageFilter.CONTOUR - 轮廓滤波(铅笔画) #ImageFilter.BLUR - 模糊滤波 image_1 = image.filter(ImageFilter.EMBOSS) image_2 = image.filter(ImageFilter.FIND_EDGES) image_3 = image.filter(ImageFilter.SHARPEN) image_4 = image.filter(ImageFilter.SMOOTH) image_5 = image.filter(ImageFilter.EDGE_ENHANCE_MORE) image_6 = image." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://snowdream87.github.io/python-pil/" />
+<meta property="article:published_time" content="2019-07-21T17:12:47&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-21T17:12:47&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://snowdream87.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>释怀</h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青春是隐藏在记忆角落里那个让人傻笑，后悔，叹息的人和事，可触摸。青春是让人怒，让人哭，让人笑，让人叹息的情绪，可感觉。青春也是一场远行，到后来我们是回不去了。</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Python PIL</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 21, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <p>&emsp;&emsp;PIL是Python第三方图像处理库，该功能强大可以对图像进行很多处理，比如图像剪切、粘贴、滤镜、缩略图、镜像、图片呈现方式、旋转等功能。<br />
+  在使用PIL是我们也要与Image，Imagefilter这两个库配合使用。以下就是一些PIL的简单教程实例。</p>
+
+<pre><code class="language-python">#我先创建一个空白图片出来，方便我将处理后的图片粘贴在上面  
+#Image.new(模式，大小，颜色)  
+whileImage = Image.new('RGB', (1366, 768), (255, 255, 255)) 
+
+#加载图像，图片对象 = Image.open（图片路径）  
+image = Image.open('image/0201.jpg')  
+
+#再获取到图片的宽和搞  
+width, height = image.size  
+
+#用thumbnail（）方法将图像像素改为以下值  
+image.thumbnail((455, 256))  
+
+#将图片对象用filter方法进行滤镜处理。同时再新建一个图片对象  
+#并且将滤镜处理后的图片放入该对像，以下是几种滤镜效果  
+#ImageFilter.EMBOSS   -  浮雕效果  
+#ImageFilter.FIND_EDGES - 泼墨效果  
+#ImageFilter.SHARPEN  -  锐化滤波  
+#ImageFilter.SMOOTH  -  平滑滤波  
+#ImageFilter.EDGE_ENHANCE_MORE - 边界增强滤波（程度更深）  
+#ImageFilter.EDGE_ENHANCE - 边界增强滤波  
+#ImageFilter.DETAIL - 细节滤波  
+#ImageFilter.CONTOUR - 轮廓滤波(铅笔画)  
+#ImageFilter.BLUR - 模糊滤波  
+image_1 = image.filter(ImageFilter.EMBOSS)  
+image_2 = image.filter(ImageFilter.FIND_EDGES)  
+image_3 = image.filter(ImageFilter.SHARPEN)  
+image_4 = image.filter(ImageFilter.SMOOTH)  
+image_5 = image.filter(ImageFilter.EDGE_ENHANCE_MORE)  
+image_6 = image.filter(ImageFilter.EDGE_ENHANCE)  
+image_7 = image.filter(ImageFilter.DETAIL)  
+image_8 = image.filter(ImageFilter.CONTOUR)  
+image_9 = image.filter(ImageFilter.BLUR)  
+
+#用paste方法将各种滤镜效果粘贴在我最初新建的空白图片里  
+#图片对象.paste(图片对象2,(x坐标，y坐标))  
+#注意：因为我宽度除3是小数因此需要强制转换成int类型  
+whileImage.paste(image_1, (int(width/3*0), 0))  
+whileImage.paste(image_2, (int(width/3*1), 0))  
+whileImage.paste(image_3, (int(width/3*2), 0))  
+whileImage.paste(image_4, (int(width/3*0), int(height/3)))  
+whileImage.paste(image_5, (int(width/3*1), int(height/3)))  
+whileImage.paste(image_6, (int(width/3*2), int(height/3)))  
+whileImage.paste(image_7, (int(width/3*0), int(height/3*2)))  
+whileImage.paste(image_8, (int(width/3*1), int(height/3*2)))  
+whileImage.paste(image_9, (int(width/3*2), int(height/3*2)))  
+whileImage.show()  
+</code></pre>
+
+<p><img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/PIL1.jpg" alt="PIL1" /></p>
+
+<pre><code class="language-python">#rotate（）方法可以将图像逆时针角度旋转  
+whileImage=whileImage.rotate(45) 
+whileImage.show()  
+</code></pre>
+
+<p><img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/PIL2.jpg" alt="PIL2" /></p>
+
+<pre><code class="language-python">#convert（）方法，有两种模式，&quot;L&quot;将图像以灰度图呈现,&quot;RGB&quot;以彩色图呈现  
+whileImage=whileImage.convert(&quot;L&quot;)  
+whileImage.show()  
+</code></pre>
+
+<p><img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/PIL3.jpg" alt="PIL" /></p>
+
+<pre><code class="language-python">#crop方法用于剪切&amp;emsp;图片对象.crop((起点x坐标 ，起点y坐标, 终点x坐标， 终点y坐标))  
+image=image.crop((0, 0, 600, 600))  
+image.show()  
+</code></pre>
+
+<p><img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/PIL4.jpg" alt="PIL" /></p>
+
+<pre><code class="language-python">image1 = Image.open('image/4011.jpg')  
+#原图像  
+image1.show() 
+</code></pre>
+
+<p><img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/%E9%95%9C%E5%83%8F1.jpg" alt="PIL" /></p>
+
+<pre><code class="language-python">#左右镜像的方法，transpose(Image.FLIP_LEFT_RIGHT)  
+image1 = image1.transpose(Image.FLIP_LEFT_RIGHT)  
+image1.show()  
+</code></pre>
+
+<p><img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/%E9%95%9C%E5%83%8F2.jpg" alt="PIL" /></p>
+
+<pre><code class="language-python">#上下镜像的，transpose(Image.FLIP_TOP_BOTTOM)
+image1 = image1.transpose(Image.FLIP_TOP_BOTTOM)  
+image1.show()  
+</code></pre>
+
+<p><img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/%E4%B8%8A%E4%B8%8B%E9%95%9C%E5%83%8F.jpg" alt="PIL" /></p>
+
+<pre><code class="language-python">#色数分离，分离r&amp;emsp;,g&amp;emsp;,b&amp;emsp;红绿蓝三原色    
+r, g, b = image.split()  
+r.show()  
+g.show() 
+b.show()  
+</code></pre>
+
+<p><img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/r.jpg" alt="PIL" /><br />
+<img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/g.jpg" alt="PIL" /><br />
+<img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/b.jpg" alt="PIL" /></p>
+
+<p>以上就是PIL库的一些简单实用的案例</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Python Turtle // 释怀</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://snowdream87.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python Turtle"/>
+<meta name="twitter:description" content="&emsp;&emsp;Turtle，是python中专门绘画的一个库，turtle分为了三大部分，画布、画笔、以及对画笔的控制。这三大部分都需要我们来编写 Python代码来进行设计及控制。其中就涉及到对画布设置，画笔设置，和画笔方向和状态的控制。只需要控制好这三个要素就可以画出你自己想画出的图案、卡通人物等。
+&emsp;&emsp;首先，设置画布的窗口的大小可以使用turtle.setup（宽度， 高度）来设置窗口大小，如果想设置窗口背景的则需要用turtle.screensize(宽度， 高度, 背景颜色)。
+&emsp;&emsp;有了窗口视图后我们就可以来设置画笔，画笔中可以设置画笔的颜色和线的宽度，以及画笔的速度。若不设置，则为画笔的认值。turtle.pencolor(颜色)，turtle.width()，turtle.speed()，三者分别可以设置逼得颜色，线的宽度和，画笔速度。 而turtle.speed()：速度值为1-10。这几点就是对画笔的基本设置。
+&emsp;&emsp;有了画布和画笔后就可以对其画画，而画时需要注意的是：再画的过程中画笔和画布是一直挨着一起的。造成画的过程中都是一直连成，这样显然不合适。因此我们就需要对画笔的状态进行控制，和生活中一样，两种状态起笔和落笔&emsp;turtle.up()，turtle.down()。这样就可以随心所欲了。
+&emsp;&emsp;最后就是对画笔的方向的控制了，在turtle中方向分为 ，向前（&emsp;turtle.forword(距离)&emsp;）、向后(&emsp;turtle.back()&emsp;)、向左(&emsp;turtle.left()&emsp;)、向右(&emsp;turtle.right()&emsp;)，四个方向。同时turtle.home()可以回到原点，turtle.goto(x坐标，y坐标)指定的位置。最后需要程序一直运行可以使用turtle.mainloop()即可。"/>
+
+    <meta property="og:title" content="Python Turtle" />
+<meta property="og:description" content="&emsp;&emsp;Turtle，是python中专门绘画的一个库，turtle分为了三大部分，画布、画笔、以及对画笔的控制。这三大部分都需要我们来编写 Python代码来进行设计及控制。其中就涉及到对画布设置，画笔设置，和画笔方向和状态的控制。只需要控制好这三个要素就可以画出你自己想画出的图案、卡通人物等。
+&emsp;&emsp;首先，设置画布的窗口的大小可以使用turtle.setup（宽度， 高度）来设置窗口大小，如果想设置窗口背景的则需要用turtle.screensize(宽度， 高度, 背景颜色)。
+&emsp;&emsp;有了窗口视图后我们就可以来设置画笔，画笔中可以设置画笔的颜色和线的宽度，以及画笔的速度。若不设置，则为画笔的认值。turtle.pencolor(颜色)，turtle.width()，turtle.speed()，三者分别可以设置逼得颜色，线的宽度和，画笔速度。 而turtle.speed()：速度值为1-10。这几点就是对画笔的基本设置。
+&emsp;&emsp;有了画布和画笔后就可以对其画画，而画时需要注意的是：再画的过程中画笔和画布是一直挨着一起的。造成画的过程中都是一直连成，这样显然不合适。因此我们就需要对画笔的状态进行控制，和生活中一样，两种状态起笔和落笔&emsp;turtle.up()，turtle.down()。这样就可以随心所欲了。
+&emsp;&emsp;最后就是对画笔的方向的控制了，在turtle中方向分为 ，向前（&emsp;turtle.forword(距离)&emsp;）、向后(&emsp;turtle.back()&emsp;)、向左(&emsp;turtle.left()&emsp;)、向右(&emsp;turtle.right()&emsp;)，四个方向。同时turtle.home()可以回到原点，turtle.goto(x坐标，y坐标)指定的位置。最后需要程序一直运行可以使用turtle.mainloop()即可。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://snowdream87.github.io/python-turtle/" />
+<meta property="article:published_time" content="2019-07-20T16:10:49&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-20T16:10:49&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://snowdream87.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>释怀</h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青春是隐藏在记忆角落里那个让人傻笑，后悔，叹息的人和事，可触摸。青春是让人怒，让人哭，让人笑，让人叹息的情绪，可感觉。青春也是一场远行，到后来我们是回不去了。</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Python Turtle</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 20, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <p>&emsp;&emsp;Turtle，是python中专门绘画的一个库，turtle分为了三大部分，画布、画笔、以及对画笔的控制。这三大部分都需要我们来编写 Python代码来进行设计及控制。其中就涉及到对画布设置，画笔设置，和画笔方向和状态的控制。只需要控制好这三个要素就可以画出你自己想画出的图案、卡通人物等。</p>
+
+<p>&emsp;&emsp;首先，设置画布的窗口的大小可以使用turtle.setup（宽度， 高度）来设置窗口大小，如果想设置窗口背景的则需要用turtle.screensize(宽度， 高度, 背景颜色)。</p>
+
+<p>&emsp;&emsp;有了窗口视图后我们就可以来设置画笔，画笔中可以设置画笔的颜色和线的宽度，以及画笔的速度。若不设置，则为画笔的认值。turtle.pencolor(颜色)，turtle.width()，turtle.speed()，三者分别可以设置逼得颜色，线的宽度和，画笔速度。
+而turtle.speed()：速度值为1-10。这几点就是对画笔的基本设置。</p>
+
+<p>&emsp;&emsp;有了画布和画笔后就可以对其画画，而画时需要注意的是：再画的过程中画笔和画布是一直挨着一起的。造成画的过程中都是一直连成，这样显然不合适。因此我们就需要对画笔的状态进行控制，和生活中一样，两种状态起笔和落笔&emsp;turtle.up()，turtle.down()。这样就可以随心所欲了。</p>
+
+<p>&emsp;&emsp;最后就是对画笔的方向的控制了，在turtle中方向分为 ，向前（&emsp;turtle.forword(距离)&emsp;）、向后(&emsp;turtle.back()&emsp;)、向左(&emsp;turtle.left()&emsp;)、向右(&emsp;turtle.right()&emsp;)，四个方向。同时turtle.home()可以回到原点，turtle.goto(x坐标，y坐标)指定的位置。最后需要程序一直运行可以使用turtle.mainloop()即可。<br />
+<img src="https://github.com/SnowDream87/snowdream87.github.io/raw/master/img/%E5%9B%A2%E5%AD%90.jpg" alt="团子" /></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

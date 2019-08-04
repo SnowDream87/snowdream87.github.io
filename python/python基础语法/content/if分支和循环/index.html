@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>If分支和循环 // 释怀</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://snowdream87.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="If分支和循环"/>
+<meta name="twitter:description" content="if分支结构 &ensp;&ensp;&ensp;&ensp;python分支结构中只有if语句
+if 语句 &ensp;&ensp;&ensp;&ensp;1.满足某个条件才执行的某段代码
+a.语法
+​ if 条件语句：结果是否为
+​ &ensp;&ensp;&ensp;&ensp;代码段
+b.说明：
+​ if - 关键字，固定写法
+条件语句 - 可以是一个具体的数据，也可以是一个已经赋值过的变量，或者数运算表达式（不能是赋值语句）
+: - 固定写法
+代码段 - 一条或者多条和if保持一个缩进的语句（任何语句）
+c.执行过程： ​ 先判断条件语句的True（如果不是bool就先转换成bool)，如果为True就执行代码段，然后在执行其他语句如果是False，不执行代码段，直接执行其他语句
+d.补充： ​ 布尔的转换 - python中所有的数据都能转成布尔，所有为0位空的值都会转换成False
+num = random.randint(1, 100) if num &amp; 1 == 1: print(num, &quot;奇数&quot;) #输入年龄，如果输入的年龄大于等于18岁，打印‘可以进网吧’ age = random.randint(1, 50) if age &gt;= 18: print(age, &quot;可以进网吧&quot;) else: print(age, &quot;不可以进网吧&quot;)  2.结构2 满足某个条件执行某段代码，不满足这个条件的时候去执行另外一段代码（if - else）
+a.语法：
+if 条件语句：
+​ &ensp;&ensp;&ensp;&ensp;代码段1"/>
+
+    <meta property="og:title" content="If分支和循环" />
+<meta property="og:description" content="if分支结构 &ensp;&ensp;&ensp;&ensp;python分支结构中只有if语句
+if 语句 &ensp;&ensp;&ensp;&ensp;1.满足某个条件才执行的某段代码
+a.语法
+​ if 条件语句：结果是否为
+​ &ensp;&ensp;&ensp;&ensp;代码段
+b.说明：
+​ if - 关键字，固定写法
+条件语句 - 可以是一个具体的数据，也可以是一个已经赋值过的变量，或者数运算表达式（不能是赋值语句）
+: - 固定写法
+代码段 - 一条或者多条和if保持一个缩进的语句（任何语句）
+c.执行过程： ​ 先判断条件语句的True（如果不是bool就先转换成bool)，如果为True就执行代码段，然后在执行其他语句如果是False，不执行代码段，直接执行其他语句
+d.补充： ​ 布尔的转换 - python中所有的数据都能转成布尔，所有为0位空的值都会转换成False
+num = random.randint(1, 100) if num &amp; 1 == 1: print(num, &quot;奇数&quot;) #输入年龄，如果输入的年龄大于等于18岁，打印‘可以进网吧’ age = random.randint(1, 50) if age &gt;= 18: print(age, &quot;可以进网吧&quot;) else: print(age, &quot;不可以进网吧&quot;)  2.结构2 满足某个条件执行某段代码，不满足这个条件的时候去执行另外一段代码（if - else）
+a.语法：
+if 条件语句：
+​ &ensp;&ensp;&ensp;&ensp;代码段1" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://snowdream87.github.io/python/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/content/if%E5%88%86%E6%94%AF%E5%92%8C%E5%BE%AA%E7%8E%AF/" />
+<meta property="article:published_time" content="2019-07-26T11:55:38&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-26T11:55:38&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://snowdream87.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>释怀</h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青春是隐藏在记忆角落里那个让人傻笑，后悔，叹息的人和事，可触摸。青春是让人怒，让人哭，让人笑，让人叹息的情绪，可感觉。青春也是一场远行，到后来我们是回不去了。</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">If分支和循环</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 26, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h3 id="if分支结构">if分支结构</h3>
+
+<p>&ensp;&ensp;&ensp;&ensp;python分支结构中只有if语句</p>
+
+<h4 id="if-语句">if 语句</h4>
+
+<p>&ensp;&ensp;&ensp;&ensp;1.满足某个条件才执行的某段代码<br />
+  a.语法<br />
+  ​ if 条件语句：结果是否为<br />
+  ​     &ensp;&ensp;&ensp;&ensp;代码段</p>
+
+<p>b.说明：<br />
+  ​ if - 关键字，固定写法<br />
+     条件语句 - 可以是一个具体的数据，也可以是一个已经赋值过的变量，或者数运算表达式（不能是赋值语句）<br />
+    : - 固定写法<br />
+     代码段 - 一条或者多条和if保持一个缩进的语句（任何语句）</p>
+
+<p>c.执行过程：
+  ​ 先判断条件语句的True（如果不是bool就先转换成bool)，如果为True就执行代码段，然后在执行其他语句如果是False，不执行代码段，直接执行其他语句</p>
+
+<p>d.补充：
+  ​ 布尔的转换 - python中所有的数据都能转成布尔，所有为0位空的值都会转换成False</p>
+
+<pre><code class="language-python">  num = random.randint(1, 100)
+  if num &amp; 1 == 1:
+    print(num, &quot;奇数&quot;)
+  #输入年龄，如果输入的年龄大于等于18岁，打印‘可以进网吧’
+  age = random.randint(1, 50)
+  if age &gt;= 18:
+      print(age, &quot;可以进网吧&quot;)
+  else:
+      print(age, &quot;不可以进网吧&quot;)
+</code></pre>
+
+<h4 id="2-结构2">2.结构2</h4>
+
+<p>满足某个条件执行某段代码，不满足这个条件的时候去执行另外一段代码（if - else）<br />
+   a.语法：<br />
+       if 条件语句：<br />
+   ​        &ensp;&ensp;&ensp;&ensp;代码段1<br />
+   ​    else：<br />
+   ​        &ensp;&ensp;&ensp;&ensp;代码段2</p>
+
+<p>b.说明：<br />
+        if/else - 关键字，固定写法<br />
+        条件语句 - 可以是一个具体的数据，也可以是一个已经赋值过的变量，或者数运算表达式（不能是赋值语句）<br />
+   ​     : - 固定结构<br />
+        代码段1 - 和if保持一个缩进的一条或者多条语句（满足if后面的条件才会执行）<br />
+        代码段2 - 和else保持一个缩进的一条或者多条语句（不满足if后面的条件才会执行）</p>
+
+<p>c.执行过程：<br />
+   ​    先判断条件语句的True（如果不是bool就先转换成bool)，如果为True就执行代码段1，否则执行代码段2</p>
+
+<pre><code class="language-python">   num = random.randint(1, 100)
+   if num &amp; 1:
+    	print(num, &quot;奇数&quot;)
+	else:
+    	print(num, &quot;偶数&quot;)
+</code></pre>
+
+<h4 id="3-条件有多个-有关联-的时候执行不同的代码-if-elif-elif-else">3.条件有多个（有关联）的时候执行不同的代码(if - elif - elif - &hellip; -else)</h4>
+
+<p>a.语法：<br />
+        if 条件语句1<br />
+  ​     &ensp;&ensp;&ensp;&ensp;代码段1<br />
+        elif 条件语句2:<br />
+  ​     &ensp;&ensp;&ensp;&ensp;代码段2<br />
+     elif 条件语句3:<br />
+  ​     &ensp;&ensp;&ensp;&ensp;代码段3<br />
+        &hellip;.<br />
+        else：<br />
+  ​     &ensp;&ensp;&ensp;&ensp;代码段n<br />
+        其他语句</p>
+
+<p>b.说明<br />
+   if/else - 关键字，固定写法<br />
+        条件语句 - 可以是一个具体的数据，也可以是一个已经赋值过的变量，或者数运算表达式（不能是赋值语句）<br />
+  ​  : - 固定结构<br />
+  ​ 代码段1 - 和if保持一个缩进的一条或者多条语句（满足if后面的条件才会执行）<br />
+        代码段2 - 和else保持一个缩进的一条或者多条语句（不满足if后面的条件才会执行）</p>
+
+<p>c.执行过程：</p>
+
+<pre><code class="language-python"># 根据输入的年龄值，判断年龄处于的阶段
+# 0-3 -&gt; 幼儿 ; 4-12 -&gt; 儿童; 13 - 18 -&gt; 青少年;19 - 28 -&gt; 青年; 29 - 50 -&gt;中年; 50以上 -&gt; 老年
+import random
+age = random.randint(0, 100)
+print(age)
+if age &lt;= 3:
+    print(&quot;幼儿&quot;)
+elif age &lt;= 12:
+    print(&quot;儿童&quot;)
+elif age &lt;= 18:
+    print(&quot;青少年&quot;)
+elif age &lt;= 28:
+    print(&quot;青年&quot;)
+elif age &lt;= 50:
+    print(&quot;中年&quot;)
+else:
+    print(&quot;老年&quot;)
+</code></pre>
+
+<h4 id="if-语句嵌套">if 语句嵌套</h4>
+
+<p>​   在if结构中的if、else、elif、后面的代码段中，还可以写其他if语句<br />
+​   练习：输入一个数，如果这个数是偶数，打印“偶数”，如果这个数是奇数，打印“奇数”如果这个数能被4整除，打印“4的倍数”</p>
+
+<pre><code class="language-python">import random
+num = random.randint(0, 100)
+if num &amp; 1:
+    print(&quot;奇数&quot;)
+else:
+    print(&quot;偶数&quot;)
+    if num % 4 == 0:
+        print(&quot;4的倍数&quot;)
+</code></pre>
+
+<h3 id="循环">循环</h3>
+
+<p>python 中的循环有两种：for - in循环和while循环<br />
+如果某段代码需要重复执行，就使用循环结构</p>
+
+<h4 id="for循环">for循环</h4>
+
+<p>​   a. 语法：<br />
+​       for 变量名 in 序列：<br />
+​           &ensp;&ensp;&ensp;&ensp;循环体</p>
+
+<p>​   b. 说明
+​       for - 关键字变量名 - 要求和声明变量的时候的变量名的要求一样<br />
+​       in - 关键字<br />
+​       序列 - python所有容器型数据类型的数据，例如：字符串、列表、元组、字典、集合、迭代器、生成器、rang循环体 - 和for保持缩进的一条或多条语句。循环体的代码就是需要重复执行的代码</p>
+
+<p>​   c. 执行过程：
+​       让变量去序列中取值，一个一个的取，取完为止，每取一个执行一次循环体（Python中控制for循环的次数，是通过控制in后面的序列元素的个数来控制）</p>
+
+<pre><code class="language-python"># for x in 'hello world':
+#     print(&quot;=============&quot;)
+
+
+# 2.range函数 - 产生指定范围的数字序列
+&quot;&quot;&quot;
+range（N） - 产生0 - N-1 的整数序列（N个数字）
+range（M,N）- 产生M - N-1 的整数序列
+range（M,N，step）- 从M开始每次加setp产生下一个数，直到N-1为止
+&quot;&quot;&quot;
+# 如果for后面的变量不用，变量名用_
+# for _ in range(100):
+#     print(&quot;!!!&quot;)
+
+# for x in range(100, 1000):
+#     print(x)
+
+# 练习：使用循环计算1+2+3+....+100
+num = 0
+for m in range(1, 101):
+    num += m
+print(num)
+
+# 练习2：统计100以内能够同时被2整除但是不能3整除的个数
+num = 0
+for number in range(0, 100):
+    if number % 2 == 0 and number % 3 != 0:
+        num += 1
+print(num)
+
+num = 0
+for number in range(0, 100, 2):
+    if number % 3 != 0:
+        num += 1
+print(num)
+</code></pre>
+
+<h4 id="while">while</h4>
+
+<p>​   a.语法<br />
+​       while 条件语句：<br />
+​           &ensp;&ensp;&ensp;&ensp;循环体</p>
+
+<p>​   b.说明<br />
+​       while - 关键字    条件语句 - 只要有结果的表达式都可以（赋值语句不行）    循环体 - 和while保存一个缩进的一条或者多天语句；（重复执行的代码就放在循环体中）</p>
+
+<p>​   c.执行过程<br />
+​       先判断条件语句是否为True，如果为True，就执行循环体，<br />
+​       执行完循环    体在判断条件语句是否为True为True又执行循环体<br />
+        &hellip;    以此类推<br />
+​       当判断条件语句的结果为False，整个循环结束，指向后面的其他语句 d.for和while循环怎么选？<br />
+​       如果循环次数确定用for循环<br />
+        循环次数不确定，和死循环要使用while循环</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Python基础语法2 // 释怀</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://snowdream87.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python基础语法2"/>
+<meta name="twitter:description" content="变量  什么是变量
+变量是在程序中开辟空间存储数据用的
+ 怎么声明变量
+ 语法： 变量名 = 值（必须赋值） 说明： 变量名 — 程序员自己命名： 要求：是标识符，不能是关键字 规范：遵守PEP8命名规范 - 变量名的所有字母都小写，并且单词 之间都用下划线隔开 见名知意：看见变量名大概知道变量中存储的什么数据   name = &#39;小米&#39; num1 = num print(num, name) # 1.变量必须先声明/赋值在使用 # print(num3) # NameError: name &#39;num3&#39; is not defined # 2.同时声明多个人变量。赋相同的值 a = b = c = 10 print(a, b, c) # 3.同时声明多个变量，赋不同的值：变量名1，变量名2，... = 值1，值2,.... # 注意：变量名要和值的个数保持一致 name, age, sex = &#39;小婷&#39;, 18, &#39;女&#39; print(name, age, sex) &quot;&quot;&quot; 4."/>
+
+    <meta property="og:title" content="Python基础语法2" />
+<meta property="og:description" content="变量  什么是变量
+变量是在程序中开辟空间存储数据用的
+ 怎么声明变量
+ 语法： 变量名 = 值（必须赋值） 说明： 变量名 — 程序员自己命名： 要求：是标识符，不能是关键字 规范：遵守PEP8命名规范 - 变量名的所有字母都小写，并且单词 之间都用下划线隔开 见名知意：看见变量名大概知道变量中存储的什么数据   name = &#39;小米&#39; num1 = num print(num, name) # 1.变量必须先声明/赋值在使用 # print(num3) # NameError: name &#39;num3&#39; is not defined # 2.同时声明多个人变量。赋相同的值 a = b = c = 10 print(a, b, c) # 3.同时声明多个变量，赋不同的值：变量名1，变量名2，... = 值1，值2,.... # 注意：变量名要和值的个数保持一致 name, age, sex = &#39;小婷&#39;, 18, &#39;女&#39; print(name, age, sex) &quot;&quot;&quot; 4." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://snowdream87.github.io/python/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/content/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%952/" />
+<meta property="article:published_time" content="2019-07-24T18:24:28&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-24T18:24:28&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://snowdream87.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>释怀</h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青春是隐藏在记忆角落里那个让人傻笑，后悔，叹息的人和事，可触摸。青春是让人怒，让人哭，让人笑，让人叹息的情绪，可感觉。青春也是一场远行，到后来我们是回不去了。</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Python基础语法2</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 24, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h4 id="变量">变量</h4>
+
+<ul>
+<li>什么是变量<br />
+变量是在程序中开辟空间存储数据用的<br /></li>
+<li>怎么声明变量<br />
+
+<ul>
+<li>语法：
+变量名 = 值（必须赋值）</li>
+<li>说明：
+变量名 — 程序员自己命名：
+要求：是标识符，不能是关键字
+规范：遵守PEP8命名规范 - 变量名的所有字母都小写，并且单词
+之间都用下划线隔开
+见名知意：看见变量名大概知道变量中存储的什么数据</li>
+</ul></li>
+</ul>
+
+<pre><code class="language-python">name = '小米'
+num1 = num
+print(num, name)
+
+# 1.变量必须先声明/赋值在使用
+# print(num3)    # NameError: name 'num3' is not defined
+
+# 2.同时声明多个人变量。赋相同的值
+a = b = c = 10
+print(a, b, c)
+
+# 3.同时声明多个变量，赋不同的值：变量名1，变量名2，... = 值1，值2,....
+# 注意：变量名要和值的个数保持一致
+name, age, sex = '小婷', 18, '女'
+print(name, age, sex)
+&quot;&quot;&quot;
+4.声明变量和给变量的原理(重要:变量存储的是数据地址而不是数据本身)
+    现在内存中开辟空间存储数据（内存空间的大小由数据的大小动态分配），然后再将保存数据的内存空间的地址赋给变量
+    用一个变量给另一个变量赋值的时候，实际是将变量中的地址赋给新的变量
+&quot;&quot;&quot;
+
+num4 = 100
+num5 = num4
+print(type(num4))
+print(hex(id(num4)))  # 获取在变量中内存的地址
+num4 = 'asdadasda'
+print(hex(id(num4)))
+print(hex(id(num5)))
+</code></pre>
+
+<h4 id="运算符">运算符：</h4>
+
+<p>数学运算符、比较运算符、逻辑运算符、位运算、赋值运算</p>
+
+<ul>
+<li><p>逻辑运算符：
+and（逻辑与运算），or(逻辑或运算)，not（逻辑非）
+所有的逻辑运算符的运算对象是布尔，结果也是布尔</p>
+
+<ul>
+<li><p>and：<br />
+a.两个都为True，结果就是True。只要有一个是False，结果就是False<br />
+True and True    -&gt;  True<br />
+True and False   -&gt;  False<br />
+False and True   -&gt;  False<br />
+False and False  -&gt;  False<br />
+b.什么时候用：当希望多个跳减肥同时满足的时候，就用and将多个条件连接and相当于生活中的并且</p></li>
+
+<li><p>or<br />
+a.运算规则：两个都为False才是False，只要有一个是True结果就是True<br />
+True or True    -&gt;  True<br />
+True or False   -&gt;  True<br />
+False or True   -&gt;  True<br />
+False or False  -&gt;  False<br />
+b.什么时候用：当希望多个条件只要有一个满足的时候，就用or将多个条件连接。or相当于生活中的或者</p></li>
+
+<li><p>not<br />
+a.运算规则：True变False，False变True<br />
+not True  -&gt; False<br />
+not False -&gt; True<br />
+b.什么时候用：对每个条件进行否定</p></li>
+
+<li><p>短路操作<br />
+逻辑与运算的短路操作：当逻辑与运算（and）的前面的表达式的值是False时候，程序不会去执行and后面的表达式<br />
+逻辑或运算的短路操作：当逻辑或运算（or）的前面的表达式的值是True时候，程序不会去执行or后面的表达式</p></li>
+</ul></li>
+
+<li><p>.赋值运算符：=、+=、-=、*=、/=、//=、**=<br />
+不管是什么样的赋值运算符，最终的操作都是给变量赋值；所以赋值运算符左边的都是变量</p>
+
+<ul>
+<li><p>=：将右边的值赋给左边的变量</p></li>
+
+<li><p>复合的赋值运算符：先将赋值符号左边变量中的值取出来，然后进行指定的运算，最后将运算结果在重新赋给左边的变量</p></li>
+
+<li><p>注意：复合运算符的左边必须是已经赋值过的变量</p></li>
+</ul></li>
+</ul>
+
+<pre><code class="language-python">用一个变量保存学生的绩点，一个变量保存学生的操评分；写一个条件来判断学生是否能拿奖学金
+奖学金条件：绩点不低于3.5，操评分至少90分
+grade = 4
+score = 88
+print('是否能拿奖学金', grade &gt; 3.5 and score &gt;= 90)
+
+奖学金条件：绩点不低于3.5，或者，操评分至少90分
+grade = 4
+score = 88
+print('是否能拿奖学金', grade &gt;= 4 or score &gt;= 90)
+</code></pre>
+
+<p>练习：</p>
+
+<pre><code class="language-python">1）判断一个数能否被2或者5整除
+import random
+number = random.randint(1, 200)
+print(number)
+print(number % 2 == 0 or number % 5 == 0)
+2）判断一个数同时被2和5整除
+print(number % 2 == 0 and number % 5 == 0)
+print(number % 10 == 0)
+3）判断一个数是否是3或者7的倍数，并且这个数的末尾不是3
+print((number % 3 == 0 or number % 7 == 0) and number % 10 != 3)
+print((number % 21 == 0) and number % 10 != 3)
+</code></pre>
+
+<ul>
+<li><p>位运算符
+位运算操作的是数字的补码的每一位；位运算因为是直接操作计算机存储空间的每一位，所以执行效率要比一般的运算高很多<br />
+位运算：&amp;（按位与运算），| (按位或运算)，^（按位异或），~(按位取反)，&lt;&lt;(左移)，&gt;&gt;（右移）</p>
+
+<ul>
+<li><p>&amp;（按位与运算）
+数字1 &amp; 数字2 -&gt; 两个数字补码上相同位置的数，如果都是1结果就是1，如果有个0就是0
+1 &amp; 1 -&gt; 1
+1 &amp; 0 -&gt; 0
+0 &amp; 0 -&gt; 0</p>
+
+<pre><code class="language-python">print(2 &amp; 3)
+&quot;&quot;&quot;
+2: 00000010
+3: 00000011
+00000010 -&gt; 2
+&quot;&quot;&quot;
+print(-2 &amp; -3)
+&quot;&quot;&quot;
+-2: (原)10000010 -&gt; (反)11111101 -&gt; (补)11111110
+-3: (原)10000011 -&gt; (反)11111100 -&gt; (补)11111101
+(补)11111100 -&gt; 11111011(反) -&gt; 10000100(原) -&gt; -4
+</code></pre>
+
+<ul>
+<li>|(按位或运算)
+数字1 | 数字2 -&gt; 两个数字补码上相同位置的数，如果有1结果都是1，两个0就是0
+1 &amp; 1 -&gt; 1
+1 &amp; 0 -&gt; 1
+0 &amp; 0 -&gt; 0</li>
+</ul>
+
+<pre><code class="language-python">print(2 | 3)
+&quot;&quot;&quot;
+2: 00000010
+3: 00000011
+00000011
+&quot;&quot;&quot;
+
+print(-2 | -3)
+&quot;&quot;&quot;
+-2: (原)10000010 -&gt; (反)11111101 -&gt; (补)11111110
+-3: (原)10000011 -&gt; (反)11111100 -&gt; (补)11111101
+11111111(补) -&gt; 11111110(反) -&gt; 10000001(原) -&gt; -1
+&quot;&quot;&quot;
+</code></pre></li>
+
+<li><p>~(按位取反)
+~数字 -&gt; 将数字补码上每一位的值由0变成1，1变成0
+~1 -&gt; 0
+~0 -&gt; 1
+~1101 -&gt; 0010</p></li>
+</ul>
+
+<pre><code class="language-python"> print(~10)
+     &quot;&quot;&quot;
+     10原码: 00001010
+     11110101(补) -&gt; 11110100(反) -&gt; 10001011(原) -&gt; -11
+     &quot;&quot;&quot;
+ print(~-3)
+ &quot;&quot;&quot;
+ -3: (原)10000011 -&gt; (反)11111100 -&gt; (补)11111101
+ 00000010 -&gt; 2
+ &quot;&quot;&quot;
+</code></pre>
+
+<ul>
+<li>^按位异或）
+数字1 ^ 数字2 -&gt; 两个数字补码上相同位置的数，相同为1，不同为0<br />
+注意：一个数异或两次同一个数，结果就是这个数本身<br />
+1 &amp; 1 -&gt; 0
+1 &amp; 0 -&gt; 1
+0 &amp; 0 -&gt; 1</li>
+</ul>
+
+<pre><code class="language-python"> print(10 ^ 20)
+ &quot;&quot;&quot;
+ 10原码: 00001010
+ 20原码: 00010100
+ 00011110 -&gt; 16+8+4+2 -&gt; 30
+ &quot;&quot;&quot;
+ print(-2 ^ -3)
+ &quot;&quot;&quot;
+ -2: (原)10000010 -&gt; (反)11111101 -&gt; (补)11111110
+ -3: (原)10000011 -&gt; (反)11111100 -&gt; (补)11111101
+ 00000011 -
+</code></pre>
+
+<ul>
+<li>&lt;&lt;(左移)，&gt;&gt;（右移）
+数字 &lt;&lt; 位数（n） -&gt; 让数字的补码整体左移n位低位用0补充 -&gt;数字 * （2<strong>N）<br />
+数字 &gt;&gt; 位数（n） -&gt; 让数字的补码整体右移你位，正数高位补哦0，负数高位补1 -&gt; 数字 // (2</strong>N)<br /></li>
+</ul></li>
+
+<li><p>应用：
+ 1.乘2的次方或者整除2的次方的操作（&lt;&lt;, &gt;&gt;）<br />
+ 2.数字 &amp; 1 == 0 -&gt; 偶数 ； 数字 &amp; 1 == 1 -&gt; 奇数
+     例子：
+     01101110 &amp; 1 == 0 偶数<br />
+     10010111 &amp; 1 == 1 奇数</p></li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
